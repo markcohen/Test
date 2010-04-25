@@ -20,5 +20,10 @@ namespace GitTest.Forms
         {
             Close();
         }
+
+        private void BtnTestExceptionClick(object sender, EventArgs e)
+        {
+            throw new ApplicationException("Test Exception");
+        }
     }
 }

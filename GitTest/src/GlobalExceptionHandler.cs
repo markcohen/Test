@@ -71,7 +71,8 @@ namespace GitTest
         private static DialogResult ShowThreadExceptionDialog(string title, Exception e)
         {
             string errorMsg = "The following application error occurred:\n\n";
-            errorMsg = errorMsg + e.Message + "\n\nStack Trace:\n" + e.StackTrace;
+            errorMsg = errorMsg + e.Message + "\n\nStack Trace:\n" + e.GetType().Name + e.StackTrace;
+
             return MessageBox.Show(errorMsg, title, MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Stop);
         }
     }
