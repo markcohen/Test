@@ -24,5 +24,15 @@ namespace GitTest.Extensions
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Converts a base64-encoded string to a byte array
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static byte[] GetBytesFromBase64(this string s)
+        {
+            return Convert.FromBase64String(s);
+        }
     }
 }
