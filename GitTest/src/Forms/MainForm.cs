@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace GitTest
+namespace GitTest.Forms
 {
     public partial class MainForm : Form
     {

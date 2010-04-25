@@ -1,4 +1,4 @@
-﻿namespace GitTest
+﻿namespace GitTest.Forms
 {
     partial class MainForm
     {
