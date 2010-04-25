@@ -30,7 +30,6 @@
         {
             this.btnGo = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnTestException = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGo
@@ -55,22 +54,11 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.BtnExitClick);
             // 
-            // btnTestException
-            // 
-            this.btnTestException.Location = new System.Drawing.Point(12, 227);
-            this.btnTestException.Name = "btnTestException";
-            this.btnTestException.Size = new System.Drawing.Size(75, 23);
-            this.btnTestException.TabIndex = 2;
-            this.btnTestException.Text = "button1";
-            this.btnTestException.UseVisualStyleBackColor = true;
-            this.btnTestException.Click += new System.EventHandler(this.BtnTestExceptionClick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.btnTestException);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGo);
             this.Name = "MainForm";
@@ -83,7 +71,6 @@
 
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnTestException;
     }
 }
 
