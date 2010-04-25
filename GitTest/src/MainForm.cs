@@ -14,5 +14,10 @@ namespace GitTest
         {
             MessageBox.Show("Hello");
         }
+
+        private void BtnExitClick(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
