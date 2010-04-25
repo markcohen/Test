@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using GitTest.Extensions;
 
 namespace GitTest.Forms
 {
@@ -12,7 +13,7 @@ namespace GitTest.Forms
 
         private void BtnGoClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
+            MessageBox.Show("Hello".GetHex());
         }
 
         private void BtnExitClick(object sender, EventArgs e)

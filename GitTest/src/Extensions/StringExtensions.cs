@@ -34,5 +34,16 @@ namespace GitTest.Extensions
         {
             return Convert.FromBase64String(s);
         }
+
+        /// <summary>
+        /// Converts a string to a lowercase hex string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        /// <remarks>The string is first converted to a UTF8-encode byte array</remarks>
+        public static string GetHex(this string s)
+        {
+            return s.GetBytes().GetHexString();
+        }
     }
 }
