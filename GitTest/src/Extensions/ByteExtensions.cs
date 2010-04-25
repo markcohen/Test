@@ -22,7 +22,7 @@ namespace GitTest.Extensions
         /// <returns></returns>
         public static string GetHexString(this byte[] bData)
         {
-            return BitConverter.ToString(bData).Replace('-', '\x20').ToLower();
+            return BitConverter.ToString(bData).Replace("-", String.Empty).ToLower();
         }
 
         /// <summary>
