@@ -12,7 +12,11 @@ namespace GitTest
         [STAThread]
         static void Main()
         {
-            //TODO: Add global exception handler
+            // Add global application exception handlers
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            Application.ThreadException += GlobalExceptionHandler.UiThreadExceptionHandler;
+            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler.UnhandledExceptionHandler;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
