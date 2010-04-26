@@ -6,7 +6,6 @@ namespace GitTest
 {
     public static class GlobalExceptionHandler
     {
-
         public static void UiThreadExceptionHandler(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
             DialogResult result = DialogResult.Cancel;
@@ -16,7 +15,14 @@ namespace GitTest
             }
             catch
             {
-                MessageBox.Show("Fatal Error", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                try
+                {
+                    MessageBox.Show("Unable to get error information", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                finally
+                {
+                    Application.Exit();
+                }
             }
 
             if (result == DialogResult.Abort)
@@ -31,7 +37,7 @@ namespace GitTest
             try
             {
                 var ex = (Exception) e.ExceptionObject;
-                string errorMsg = FormatErrorMessage(ex);
+                string errorMsg = FormatExceptionMessage(ex);
 
                 // Since we can't prevent the app from terminating, log this to the event log.
                 if (!EventLog.SourceExists("ThreadException"))
@@ -57,12 +63,10 @@ namespace GitTest
         // Creates the error message and displays it.
         private static DialogResult ShowThreadExceptionDialog(string title, Exception e)
         {
-            string errorMsg = FormatErrorMessage(e);
-
-            return MessageBox.Show(errorMsg, title, MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Stop);
+            return MessageBox.Show(FormatExceptionMessage(e), title, MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Stop);
         }
 
-        private static string FormatErrorMessage(Exception e)
+        private static string FormatExceptionMessage(Exception e)
         {
             string errorMsg = string.Format(
                 "The following application error occurred:\n\n{0}\n\nStack Trace:\n{1}{2}", 
