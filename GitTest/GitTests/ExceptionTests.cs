@@ -6,8 +6,7 @@ namespace GitTests
     [TestClass]
     public class ExceptionTests
     {
-        [TestMethod]
-        [ExpectedException(typeof(ApplicationException))]
+        [TestMethod, ExpectedException(typeof(ApplicationException))]
         public void TestUserInterfaceException()
         {
             throw new ApplicationException("TestUserInterfaceException");
