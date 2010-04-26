@@ -1,0 +1,5 @@
+C:\Users\Adam G Sternberg\Documents\Git Repositories\Test.git\GitTest\GitTests\bin\Release\GitTests.dll
+C:\Users\Adam G Sternberg\Documents\Git Repositories\Test.git\GitTest\GitTests\bin\Release\GitTests.pdb
+C:\Users\Adam G Sternberg\Documents\Git Repositories\Test.git\GitTest\GitTests\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Adam G Sternberg\Documents\Git Repositories\Test.git\GitTest\GitTests\obj\Release\GitTests.dll
+C:\Users\Adam G Sternberg\Documents\Git Repositories\Test.git\GitTest\GitTests\obj\Release\GitTests.pdb
