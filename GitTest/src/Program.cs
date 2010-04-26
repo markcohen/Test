@@ -15,7 +15,7 @@ namespace GitTest
             // Add global application exception handlers
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.ThreadException += GlobalExceptionHandler.UiThreadExceptionHandler;
-            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler.UnhandledExceptionHandler;
+            AppDomain.CurrentDomain.UnhandledException += GlobalExceptionHandler.NonUiThreadExceptionHandler;
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

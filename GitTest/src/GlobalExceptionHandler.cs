@@ -34,7 +34,7 @@ namespace GitTest
         }
 
         // This exception cannot be kept from terminating the application
-        public static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)
+        public static void NonUiThreadExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
             try
             {
